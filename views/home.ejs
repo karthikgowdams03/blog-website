@@ -6,7 +6,9 @@
 <div>
   <h1><%=Post.title%></h1>
 
-  <p><%=Post.content.slice(0,100)+'... '%><a href= 'posts/<%=Post.title %> '>Read More</a></p>
+  <p><%=Post.content.slice(0,100)+'... '%><a href= 'posts/<%=Post._id%> '>Read More</a></p>
+  <input type="hidden" name="postid" value="<%=Post._id%>">
   
 </div>
-<% }); %> <%-include("partials/footer")-%>
+<% }); %>
+ <%-include("partials/footer")-%>
